@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Urgent Email</title>
+</head>
+<body>
+    <h1>Please Collaborate!</h1>
+    <h4>As you might be aware, the release of our Part 3 results is currently pending. It has come to our attention that a small collective effort from us could speed up the process.I kindly request each of you to send an email to [ Respective  Authority including Registrar , Dean Student's Welfare , Controller of Examinations]  expressing our urgent need for the results to be released.</h4>
+    <button id="sendEmailButton">Send Email/Message</button>
+
+    <script>
+        document.getElementById('sendEmailButton').addEventListener('click', function() {
+            const recipientEmails = 'dsw@lnmu.ac.in,coe@lnmu.ac.in,registrar@lnmu.ac.in';  // Replace with your and your friend's email addresses
+            const subject = 'Urgent Request for Immediate Release of Part 3 Results';
+            const body = `This is an urgent plea for the immediate release of the Part 3 results. The delay in releasing these results is causing significant hardship and put in danger the academic progress of numerous students.
+
+Many of us are unable to enroll in subsequent courses or take crucial examinations due to this ongoing delay. This situation is causing immense stress and potential academic setbacks, potentially resulting in the loss of an entire academic year.
+
+We understand the complexities involved in result processing, but we urge you to prioritize the release of these results as a matter of urgency. The future of our academic careers and exams hangs in the balance.
+
+Please help us if possible.`;
+            window.location.href = `mailto:${recipientEmails}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        });
+    </script>
+</body>
+</html>
